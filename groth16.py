@@ -201,7 +201,7 @@ beta_G2 = multiply(G2, int(beta))
 
 # Powers of tau for h(tau)t(tau)
 def generate_powers_of_tau_HT(tau):
-    before_delta_inverse = [multiply(G1, int(tau ** i * t_evaluated_at_tau)) for i in range(t.degree - 1)] # up to tau**6
+    before_delta_inverse = [multiply(G1, int(tau ** i * t_evaluated_at_tau)) for i in range(t.degree - 1)] # up to tau**5
     return [multiply(entry, int(delta_inverse)) for entry in before_delta_inverse]
 
 # [beta] as G1 point and [delta] and G1 point
