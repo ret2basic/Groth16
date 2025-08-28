@@ -75,9 +75,9 @@ contract Pairing {
         uint256 negative_A1_x = A1.x;
         uint256 negative_A1_y = field_modulus - A1.y;
 
-        // pairing(A1, B2) = pairing(alpha1 + beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
-        // 0 = -pairing(A1, B2) + pairing(alpha1 + beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
-        // 0 = pairing(-A1, B2) + pairing(alpha1 + beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
+        // pairing(A1, B2) = pairing(alpha1, beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
+        // 0 = -pairing(A1, B2) + pairing(alpha1, beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
+        // 0 = pairing(-A1, B2) + pairing(alpha1, beta2) + pairing(inner_product1, gamma2) + pairing(C1, delta2)
         uint256[24] memory points = [
             // first pairing
             negative_A1_x,
